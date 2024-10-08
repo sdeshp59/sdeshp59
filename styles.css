@@ -1,0 +1,218 @@
+body, html {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #e0e0e0;
+  }
+  
+  .container {
+    display: flex;
+    height: 100%;
+  }
+  
+  .menu-pane {
+    position: fixed; /* Fixes the menu pane in place */
+    left: 0; /* Aligns it to the left */
+    top: 0; /* Sticks it to the top */
+    width: 50px;
+    background-color: #e0e0e0;
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu-button {
+    background-color: transparent;
+    border: none;
+    color: #8f4c2d; 
+    font-size: 16px;
+    cursor: pointer;
+    transform: rotate(-90deg);
+    transform-origin: center center;
+    white-space: nowrap;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    transition: color 0.3s ease; 
+  }
+
+  .logo1, .logo2 {
+    margin-bottom: 10px;  
+    display: block;
+    text-align: center;
+  }
+  
+  .menu-button:hover {
+    color: #ad0216; 
+  }
+  
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .typewriter-container {
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .typewriter {
+    font-size: 48px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: break-word;
+    color: #8f4c2d;
+  }
+  
+  .cursor {
+    display: inline-block;
+    width: 3px;
+    height: 2.4em;
+    background-color: #8f4c2d;
+    margin-left: 2px;
+    animation: blink 0.7s infinite;
+    vertical-align: text-top;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+  
+  .description {
+    margin-top: 20px;
+    font-size: 25px;
+    color: #8f4c2d;
+    max-width: 600px;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    visibility: hidden;
+  }
+  
+  .highlight {
+    color: #ad0216;
+  }
+  
+  #subtext {
+    visibility: hidden;
+  }
+  
+  .logo1 {
+    margin-bottom: 0px;
+  }
+
+  .logo2 {
+    padding: 0;
+    margin-bottom: 100px;
+  }
+
+/* Updated Resume Sections */
+.resume-sections {
+  margin-left: 70px; /* Account for fixed menu pane */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Increased gap between sections for better separation */
+  width: calc(100% - 90px);
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Individual Resume Section */
+.resume-section {
+  background-color: #e0e0e0;
+  padding: 25px;
+  border-radius: 8px;
+  border: 2px solid #8f4c2d;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Resume Entry */
+.resume-entry {
+  margin-bottom: 25px; /* Increased bottom margin for better separation */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Style for links in resume entries */
+.resume-entry a {
+  word-break: break-all; /* Allow breaking of long URLs */
+  display: inline-block;
+  max-width: 100%;
+}
+
+/* Additional styles for better content organization */
+.resume-entry strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1em; /* Slightly larger font for entry titles */
+}
+
+.resume-entry ul {
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.resume-entry li {
+  margin-bottom: 8px;
+  line-height: 1.4; /* Improved line height for readability */
+}
+.skills-list {
+  column-count: 1;
+  column-gap: 20px;
+  background-color: #e0e0e0;
+  padding: 25px;
+  border-radius: 8px;
+  border: 2px solid #8f4c2d;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.skills-list ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.skills-list li {
+  break-inside: avoid-column;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .resume-sections {
+      margin-left: 60px;
+      width: calc(100% - 70px);
+      padding: 15px;
+  }
+  
+  .resume-section {
+      padding: 20px;
+  }
+
+  .resume-entry strong {
+      font-size: 1em; /* Adjust font size for smaller screens */
+  }
+}
