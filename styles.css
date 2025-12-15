@@ -42,8 +42,8 @@ body, html {
     transition: color 0.3s ease; 
   }
 
-  .logo1, .logo2 {
-    margin-bottom: 10px;  
+  .logo1, .logo2, .logo3 {
+    margin-bottom: 10px;
     display: block;
     text-align: center;
   }
@@ -122,6 +122,10 @@ body, html {
   }
 
   .logo2 {
+    margin-bottom: 0px;
+  }
+
+  .logo3 {
     padding: 0;
     margin-bottom: 100px;
   }
@@ -200,6 +204,55 @@ body, html {
   break-inside: avoid-column;
 }
 
+/* Projects Page Styling */
+.projects-content {
+  margin-left: 100px;
+  padding: 40px;
+  width: calc(100% - 140px);
+  max-width: 1000px;
+}
+
+.projects-content h1 {
+  color: #8f4c2d;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.project-item {
+  margin-bottom: 35px;
+  padding: 20px 0;
+  border-bottom: 1px solid #d4a574;
+}
+
+.project-item:last-child {
+  border-bottom: none;
+}
+
+.project-item strong {
+  display: block;
+  color: #5c2e10;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.project-links {
+  margin-top: 8px;
+  color: #704214;
+}
+
+.project-links a {
+  color: #8f4c2d;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+  color: #ad0216;
+  text-decoration: underline;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .resume-sections {
@@ -207,12 +260,22 @@ body, html {
       width: calc(100% - 70px);
       padding: 15px;
   }
-  
+
   .resume-section {
       padding: 20px;
   }
 
   .resume-entry strong {
       font-size: 1em; /* Adjust font size for smaller screens */
+  }
+
+  .projects-content {
+      margin-left: 70px;
+      width: calc(100% - 90px);
+      padding: 20px;
+  }
+
+  .project-item strong {
+      font-size: 1.1em;
   }
 }
