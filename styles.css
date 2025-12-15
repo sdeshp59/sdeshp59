@@ -255,6 +255,102 @@ body, html {
   text-decoration: underline;
 }
 
+/* Photography Main Page Styling */
+.photography-content {
+  margin-left: 100px;
+  padding: 40px;
+  width: calc(100% - 140px);
+  max-width: 1200px;
+}
+
+.photography-content h1 {
+  color: #8f4c2d;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 20px 0;
+}
+
+.gallery-thumbnail {
+  text-decoration: none;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.gallery-thumbnail img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail-title {
+  color: #5c2e10;
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Individual Photo Gallery Page Styling */
+.photo-gallery-content {
+  margin-left: 100px;
+  padding: 40px;
+  width: calc(100% - 140px);
+  max-width: 1400px;
+}
+
+.photo-gallery-content h1 {
+  color: #8f4c2d;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.photo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.photo-item img:hover {
+  transform: scale(1.02);
+}
+
+.photo-caption {
+  color: #704214;
+  font-style: italic;
+  font-size: 1em;
+  margin-top: 10px;
+  text-align: center;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .resume-sections {
@@ -279,5 +375,21 @@ body, html {
 
   .project-item strong {
       font-size: 1.1em;
+  }
+
+  .photography-content, .photo-gallery-content {
+      margin-left: 70px;
+      width: calc(100% - 90px);
+      padding: 20px;
+  }
+
+  .gallery-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+  }
+
+  .photo-grid {
+      grid-template-columns: 1fr;
+      gap: 25px;
   }
 }
